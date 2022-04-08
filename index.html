@@ -26,6 +26,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
 
@@ -45,20 +47,26 @@
             font-family: 'Roboto', sans-serif;
             font-weight: 700;
             color: #3b4157;
-            margin: 40px auto;
+            margin: 40px auto 40px;
+        }
+
+        a {
+            cursor: pointer !important;
         }
 
         h4 {
             font-family: 'Roboto Slab', serif;
-            font-size: 22px; 
+            font-size: 32px; 
             color: #ff594d;
             font-weight: 300;
             margin-bottom: 32px;
+            width: 95%;
+            
         }
         
         p {
             font-family: 'Roboto', sans-serif;
-            font-size: 18px;
+            font-size: 24px;
             line-height: 1.4;
             margin-bottom: 32px;
             color: black;
@@ -85,26 +93,38 @@
             border-top: 1px solid black;
             display: block;
             width: 100%;
-            margin-bottom: 12px;
+            margin: 0 auto 12px;
         }
 
         .line2 {
             border-top: 1px solid black;
             display: block;
             width: 75%;
-            margin-top: 12px;
-            margin-bottom: 40px;
+            margin: 12px auto 40px;
         }
 
         .cabecalho {
+            font-size: 56px;
+        }
+
+        .comentario {
+            font-size: 24px;
+            font-style: italic;
+            width: 80%;
             margin: 0;
+        }
+
+        .seta {
+            font-size: 4rem; 
+            display: block; 
+            text-align: center;
         }
         
         .background-white {
-            background-image: url(image/background.jpg);
+            background-image: url(image/background_v2.jpg);
             background-size: cover;
             background-position: right;
-            padding: 80px 0 100px;
+            padding: 48px 0 24px;
             position: relative;
         }
 
@@ -128,18 +148,18 @@
         }
         
         .imagens {
-            width: 75%;
+            width: 50%;
             display: block;
             margin: 40px auto 32px;
             box-shadow: 0 0 20px #00000025;
         }
         
         .imagens2 {
-            width: 100%;
+            
             display: block;
-            margin: 40px auto 32px;
+            margin: 40px auto 72px;
             box-shadow: 0 0 20px #00000025;
-            height: 500px;
+            
         }
         
         .imagens3 {
@@ -149,14 +169,14 @@
         }
         
         .imagens4 {
-            width: 50%;
+            width: 45%;
             display: block;
             margin: 40px auto 32px;
             box-shadow: 0 0 20px #00000025;
         }
         
         .titulo {
-            margin: 0 auto 32px;
+            margin: 56px auto;
             display: block;
             font-weight: 700;
             font-size: 40px;
@@ -213,20 +233,26 @@
 
 <body>
     <section class="background-white">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-5 offset-md-2">
-                    <div class="line"></div>
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-md-8">
                     <h1 class="cabecalho">É POSSÍVEL REVERTER AQUELA PELE FINA E FLÁCIDA QUE PARECE AMASSADA?</h1>
-                    <div class="line2"></div>
                     <h4>Doutor afirma: "Sim… E o melhor, SEM sofrer com agulhas e SEM ter que pagar caros por cremes hidratantes..."</h4>
-                    <p>"Uma mulher disse se sentir 15 anos mais jovem depois de usar este hidratante caseiro natural."</p>
+                    <div class="line"></div>
+                    <p class="comentario">"Uma mulher disse se sentir 15 anos mais jovem depois de usar este hidratante caseiro natural."</p>
+                </div>
+                <div class="row justify-content-center align-content-center">
+                    <div class="col-md-5">
+                        <a href="#pagina" style="color: black;">
+                            <i class="bi bi-arrow-down-short seta animate__animated animate__fadeInDown animate__slower animate__infinite"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="background-blue">
+    <section class="background-blue" id="pagina">
         <div class="container ">
             <div class="row justify-content-center">
                 <div class="col-md-10 pagina">
@@ -250,7 +276,7 @@
                             <img src="image/image7.jpg" alt="" class="imagens2">
                         </div>
                         <div class="col-md-6">
-                            <img src="image/image8.png" alt="" class="imagens2">
+                            <img src="image/image8.jpg" alt="" class="imagens2">
                         </div>
                     </div>
 
@@ -269,10 +295,10 @@
 
                     <div class="row">
                         <div class="col-md-6">
-                            <img src="image/image2.png" alt="" class="imagens3">
+                            <img src="image/image2.jpg" alt="" class="imagens2">
                         </div>
                         <div class="col-md-6">
-                            <img src="image/image3.jpg" alt="" class="imagens3">
+                            <img src="image/image3.jpg" alt="" class="imagens2">
                         </div>
                     </div>
                     
