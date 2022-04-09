@@ -27,41 +27,45 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="js/Jquery.js"></script>
 
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap');
-        
         body {
             background-color: lightgray;
+            font-family: 'Roboto', serif;
         }
         
         .container-fluid {
             padding: 0 !important;
         }
-
-        h1{
+        
+        h1 {
             font-family: 'Roboto', sans-serif;
             font-weight: 700;
             color: #3b4157;
             margin: 40px auto 40px;
         }
-
+        
         a {
             cursor: pointer !important;
         }
-
+        
+        a:hover {
+            color: white !important;
+        }
+        
         h4 {
             font-family: 'Roboto Slab', serif;
-            font-size: 32px; 
+            font-size: 32px;
             color: #ff594d;
             font-weight: 300;
             margin-bottom: 32px;
             width: 95%;
-            
         }
         
         p {
@@ -88,35 +92,40 @@
             margin: 0 24px;
             max-width: 100%;
         }
-
+        
         .line {
             border-top: 1px solid black;
             display: block;
             width: 100%;
             margin: 0 auto 12px;
         }
-
+        
         .line2 {
             border-top: 1px solid black;
             display: block;
             width: 75%;
             margin: 12px auto 40px;
         }
-
+        
         .cabecalho {
             font-size: 56px;
         }
-
+        
+        .subhead {
+            font-size: 18px;
+            width: 100%;
+        }
+        
         .comentario {
             font-size: 24px;
             font-style: italic;
             width: 80%;
             margin: 0;
         }
-
+        
         .seta {
-            font-size: 4rem; 
-            display: block; 
+            font-size: 4rem;
+            display: block;
             text-align: center;
         }
         
@@ -127,7 +136,7 @@
             padding: 48px 0 24px;
             position: relative;
         }
-
+        
         .background-blue {
             background-color: #f5f5f5;
         }
@@ -155,11 +164,9 @@
         }
         
         .imagens2 {
-            
             display: block;
             margin: 40px auto 72px;
             box-shadow: 0 0 20px #00000025;
-            
         }
         
         .imagens3 {
@@ -183,7 +190,7 @@
             text-align: center;
             line-height: 1;
         }
-
+        
         .legenda {
             font-size: 14px;
             margin: 0 auto 40px;
@@ -227,6 +234,74 @@
             text-align: center;
             text-transform: uppercase;
             transform: scale(1.1);
+        }
+        
+        .ck-footer {
+            display: block;
+            position: fixed;
+            bottom: -100px;
+            width: 100%;
+            transition: all .4s ease-out;
+            -webkit-transition: all .4s ease-out;
+            -moz-transition: all .4s ease-out;
+            -o-transition: all .4s ease-out;
+        }
+        
+        .fixed-ck-footer {
+            bottom: 0;
+        }
+        
+        .ck-footer .box-ck-footer {
+            background-color: #fff;
+            box-sizing: border-box;
+            padding: 5px 5px 5px 5px;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+            box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+            -webkit-box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+            -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+            border-top-left-radius: 6px;
+            -webkit-border-top-left-radius: 6px;
+            -moz-border-radius-topleft: 6px;
+            -ms-border-top-left-radius: 6px;
+            -o-border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            -webkit-border-top-right-radius: 6px;
+            -moz-border-radius-topright: 6px;
+            -ms-border-top-right-radius: 6px;
+            -o-border-top-right-radius: 6px;
+        }
+        
+        .cta-bottom {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0px auto;
+            padding: 10px 5px;
+            font-family: "Oswald", "Arial", sans-serif;
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            border-radius: 6px;
+            background: linear-gradient(0deg, rgba(6, 2, 82, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 135, 208, 1) 100%);
+            text-decoration: none;
+        }
+        
+        [data-anime] {
+            opacity: 0;
+            transition: .3s;
+            transform: translate3d(0, 60px, 0);
+        }
+        
+        [data-anime].animate {
+            opacity: 1;
+            transition: .3s;
+            transform: translate3d(0, 0, 0);
         }
     </style>
 </head>
@@ -284,12 +359,13 @@
                     <p>Uma pele que lembra muito o papel crepom...</p>
                     <p>Você já deve ter visto por aí, propagandas de cremes que prometem hidratar esse tipo de pele...</p>
 
-                    <h1 class="titulo">Só que ninguém te conta que Hidratantes<br> NÃO FUNCIONAM na "Pele Crepe".</u></h1>
+                    <h1 class="titulo">Só que ninguém te conta que Hidratantes<br> NÃO FUNCIONAM na "Pele Crepe".</u>
+                    </h1>
 
                     <p>Se você usa hidratantes e não vê resultados...</p>
                     <p>...Ou se você nota sua pele um pouco melhor, mas depois de algumas horas ela resseca…</p>
                     <p>Então, esse é um sinal claro de que você sofre de um problema sério.… Que impede a sua pele de ficar saudável…</p>
-                    <p>Antes de  te ensinar uma hidratação caseira que com 30 segundos por dia pode resolver esse problema restaurando até 15 anos da sua aparência… </p>
+                    <p>Antes de te ensinar uma hidratação caseira que com 30 segundos por dia pode resolver esse problema restaurando até 15 anos da sua aparência… </p>
                     <p>Primeiro, quero expor o real motivo por trás da sua pele envelhecida, explicar o que está acontecendo e porque ninguém na indústria dos cosméticos quer falar sobre isso.</p>
                     <p>Veja essas imagens…</p>
 
@@ -301,15 +377,15 @@
                             <img src="image/image3.jpg" alt="" class="imagens2">
                         </div>
                     </div>
-                    
+
                     <p>Estes são alguns resultados, de mulheres de 50, 70 e até 90 anos que estão experimentando uma segunda chance de aproveitar a vida. </p>
-                    <p>Imagine a sensação de tocar no braço e perceber uma pele macia, mais esticada e lisa.   </p>
+                    <p>Imagine a sensação de tocar no braço e perceber uma pele macia, mais esticada e lisa. </p>
                     <p>Imagine poder voltar a usar suas roupas decotadas sem preocupação.</p>
                     <p>Esbanjar a mesma beleza e elegância da sua juventude toda vez que sair de casa. </p>
                     <p>Imagine suas amigas implorando para saber o que você fez para parecer mais jovem. </p>
                     <p>Você vai viver essas novas experiências…</p>
                     <p>…se seguir corretamente as minhas instruções.</p>
-                        
+
                     <div class="row box-destaque">
                         <div class="col-md-3">
                             <img src="image/Doutor.jpg" alt="" class="imagens3">
@@ -325,14 +401,14 @@
                     <p>E depois de tudo isso, descobrimos um fato surpreendente.</p>
                     <p>Descobrimos que nenhum hidratante vai funcionar nesse tipo de pele.</p>
                     <p>E o motivo é bem simples: cremes não conseguem penetrar na pele crepe, a verdade é que eles só umedecem superficialmente a pele.</p>
-                        
+
                     <h1 class="titulo">Tudo começa com você<br> entendendo a pele <u>CREPE.</u></h1>
 
                     <p>Pesquisando percebi que à medida que envelhecemos, nossa pele produz cada vez menos células.</p>
                     <p>E sem novas células para substituir as células mortas…</p>
                     <p>Rachaduras começam a aparecer, e <b>através dessas rachaduras, nossa pele perde água.</b></p>
 
-                    <img src="image/Sem-Título-1.png" alt="" class="imagens">
+                    <img src="image/pele-crepe.gif" alt="" class="imagens">
 
                     <p>Os cientistas têm um nome para esse problema: <b>Perda de Água Transepidérmica</b> ou <u>PAT</u>.</p>
                     <p>Repetindo.</p>
@@ -345,7 +421,7 @@
                     <p>A pele de uma <b>mulher adulta jovem</b> só consegue reter <b>50% de água.</b></p>
                     <p>E se você já <b>passou dos 50… bem, aí sua pele retém menos água ainda</b>, chega a perder um terço da água que tinha na juventude. </p>
 
-                    <img src="image/image4.png" alt="" class="imagens4">
+                    <img src="image/image4.jpg" alt="" class="imagens4">
 
                     <p>É exatamente por isso que você não consegue se livrar da Pele Crepe. </p>
                     <p>Se você deseja corrigir esse problema na sua aparência, primeiro você precisa fechar as rachaduras da sua pele para que ela volte a ficar hidratada.</p>
@@ -380,344 +456,365 @@
 
                     <ul>
                         <li><b>Primeiro</b>, as rachaduras na superfície da pele começam a desaparecer.</li>
-                        <li><b>Segundo</b>,  sua pele vai recuperar a capacidade de reter água, voltando a reter os mesmos 75% de hidratação da sua juventude.</li>
+                        <li><b>Segundo</b>, sua pele vai recuperar a capacidade de reter água, voltando a reter os mesmos 75% de hidratação da sua juventude.</li>
                         <li><b>E terceiro</b>, uma verdadeira transformação irá ocorrer internamente, pois sua pele será capaz de absorver, e produzir mais proteínas estruturais, como colágeno, elastina e muitas outras. </li>
                     </ul>
 
                     <p>Certo, mas de que compostos estamos falando? </p>
                     <p>Em um estudo realizado, em humanos, o grupo que tomou um composto chamado Licopeno produziu 68% menos DHT do que o grupo que não tomou.
 
-                    <img src="image/image9.png" alt="" class="imagens">
-                    <p class="legenda">(Enzima que afeta a pele feminina)</p>
+                        <img src="image/image9.png" alt="" class="imagens">
+                        <p class="legenda">(Enzima que afeta a pele feminina)</p>
 
-                    <p>Note que o DHT é um hormônio que o seu corpo produz durante toda a vida.</p>
-                    <p>É o mesmo hormônio que te ajudou a deixar de ser criança e se tornar adulta.</p>
-                    <p>O problema é que <b>esse hormônio provoca um efeito terrível na pele das mulheres depois dos 50.</b></p>
-                    <p>Isso porque o DHT <u>impede que a pele produza células novas</u> para substituir as mortas.</p>
-                    <p>O que provoca rachaduras na epiderme e permite vazar a hidratação da pele.</p>
-                    <p>Portanto, se você deseja manter a sua pele hidratada, você precisa diminuir o DHT no seu corpo e principalmente...</p>
+                        <p>Note que o DHT é um hormônio que o seu corpo produz durante toda a vida.</p>
+                        <p>É o mesmo hormônio que te ajudou a deixar de ser criança e se tornar adulta.</p>
+                        <p>O problema é que <b>esse hormônio provoca um efeito terrível na pele das mulheres depois dos 50.</b></p>
+                        <p>Isso porque o DHT <u>impede que a pele produza células novas</u> para substituir as mortas.</p>
+                        <p>O que provoca rachaduras na epiderme e permite vazar a hidratação da pele.</p>
+                        <p>Portanto, se você deseja manter a sua pele hidratada, você precisa diminuir o DHT no seu corpo e principalmente...</p>
 
-                    <h1 class="titulo">Ingerir LICOPENO!</h1>
+                        <h1 class="titulo">Ingerir LICOPENO!</h1>
 
-                    <p>Só que o Licopeno faz muito mais do que impedir o seu corpo de produzir o DHT.</p>
-                    <p>Em testes clínicos, ele também aumentou a retenção da umidade da pele em 85%...</p>
-                    <p>Reduziu o ressecamento em 60%...</p>
-                    <p>E atenuou as linhas finas em poucas horas. </p>
-                    <p>Por isso, quando vi os estudos sobre o Licopeno…</p>
-                    <p>Soube de cara que ele tinha um enorme potencial para suavizar a pele fina, sem vida e ressecada. </p>
-                    <p>Este é, sem dúvida, o ingrediente mais poderoso no combate à Pele Crepe. </p>
-                    <p>E não se preocupe em tomar nota, pois ao final vou passar a lista de todos os compostos.</p>
-                    <p>E a maior novidade vem agora.</p>
-                    <p>O licopeno é um composto indispensável para a pele. </p>
-                    <p>Mas quando seu consumo é feito junto desse segundo nutriente, os seus resultados são POTENCIALIZADOS...</p>
-                    <p>Por isso fiquei tão empolgado quando descobri o seu nome.</p>
-                    <p>Você também precisa de Vitamina C…</p>
-                    <p>Veja, um estudo de 2002, feito pela Toho University em Tóquio, no Japão... </p>
-                    <p>Avaliou que após 4 semanas com suplementação com vitamina C…</p>
-                    <p>Um grupo de mulheres conseguiu aumentar os níveis de hidratação da pele.</p>
-                    <p>Elas também tiveram as rugas suavizadas e a pele ficou mais macia. </p>
-                    <p>Como os cientistas puderam observar…</p>                        
+                        <p>Só que o Licopeno faz muito mais do que impedir o seu corpo de produzir o DHT.</p>
+                        <p>Em testes clínicos, ele também aumentou a retenção da umidade da pele em 85%...</p>
+                        <p>Reduziu o ressecamento em 60%...</p>
+                        <p>E atenuou as linhas finas em poucas horas. </p>
+                        <p>Por isso, quando vi os estudos sobre o Licopeno…</p>
+                        <p>Soube de cara que ele tinha um enorme potencial para suavizar a pele fina, sem vida e ressecada. </p>
+                        <p>Este é, sem dúvida, o ingrediente mais poderoso no combate à Pele Crepe. </p>
+                        <p>E não se preocupe em tomar nota, pois ao final vou passar a lista de todos os compostos.</p>
+                        <p>E a maior novidade vem agora.</p>
+                        <p>O licopeno é um composto indispensável para a pele. </p>
+                        <p>Mas quando seu consumo é feito junto desse segundo nutriente, os seus resultados são POTENCIALIZADOS...</p>
+                        <p>Por isso fiquei tão empolgado quando descobri o seu nome.</p>
+                        <p>Você também precisa de Vitamina C…</p>
+                        <p>Veja, um estudo de 2002, feito pela Toho University em Tóquio, no Japão... </p>
+                        <p>Avaliou que após 4 semanas com suplementação com vitamina C…</p>
+                        <p>Um grupo de mulheres conseguiu aumentar os níveis de hidratação da pele.</p>
+                        <p>Elas também tiveram as rugas suavizadas e a pele ficou mais macia. </p>
+                        <p>Como os cientistas puderam observar…</p>
 
-                    <ul>
-                        <li>A vitamina C ajudou a <b>reparar a barreira da pele…</b></li>
-                        <li>Aumentou a <b>capacidade dela em reter umidade.</b></li>
-                        <li>E aliada ao licopeno pôde <b>devolver a hidratação adequada para a pele crepe.</b></li>
-                    </ul>
+                        <ul>
+                            <li>A vitamina C ajudou a <b>reparar a barreira da pele…</b></li>
+                            <li>Aumentou a <b>capacidade dela em reter umidade.</b></li>
+                            <li>E aliada ao licopeno pôde <b>devolver a hidratação adequada para a pele crepe.</b></li>
+                        </ul>
 
-                    <h4 style="text-align: center;">Mas sendo honesto, apesar da hidratação ser importante…</h4>
-                    <h1 class="titulo" style="margin-top: -20px;"><u>Ela só é metade da resposta!</u></h1>
+                        <h4 class="subhead" style="text-align: center;">Mas sendo honesto, apesar da hidratação ser importante…</h4>
+                        <h1 class="titulo" style="margin-top: -20px;"><u>Ela só é metade da resposta!</u></h1>
 
-                    <p>Ela só é metade da resposta porque ma pele hidratada, que consegue reter água é apenas o primeiro piso da construção.</p>
-                    <p>Para levantar o segundo andar, seu organismo precisa de mais proteínas.</p>
-                    <p>Por isso, o meu segundo segredo foi adicionar colágeno a este hidratante caseiro.</p>
-                    <p>Mas não falo de qualquer colágeno, mas sim de um o tipo certo...</p>
-                    <p>Depois dos 30, as mulheres produzem 1% a menos de colágeno por ano.</p>
-                    <p>O que significa que aos 50, elas produzem 20% menos colágeno.</p>
-                    <p>E aos 70 anos, quase 40% menos.</p>
-                        
-                    <img src="image/image10.png" alt="" class="imagens4">
+                        <p>Ela só é metade da resposta porque ma pele hidratada, que consegue reter água é apenas o primeiro piso da construção.</p>
+                        <p>Para levantar o segundo andar, seu organismo precisa de mais proteínas.</p>
+                        <p>Por isso, o meu segundo segredo foi adicionar colágeno a este hidratante caseiro.</p>
+                        <p>Mas não falo de qualquer colágeno, mas sim de um o tipo certo...</p>
+                        <p>Depois dos 30, as mulheres produzem 1% a menos de colágeno por ano.</p>
+                        <p>O que significa que aos 50, elas produzem 20% menos colágeno.</p>
+                        <p>E aos 70 anos, quase 40% menos.</p>
 
-                    <p>Só que não adianta sair por aí tomando o colágeno comum e achar que isso vai te ajudar a combater as rugas.</p>
-                    <p>O motivo é simples: a molécula de colágeno é grande demais para ser absorvida.</p>
-                    <p>E algumas marcas de baixa qualidade podem ter colágeno que são eliminados na digestão.</p>
-                    <p>Se você está tomando colágeno 3 vezes ao dia e não está vendo resultados, agora já sabe o motivo.</p>
-                    <p>Mas calma…Felizmente há uma saída.</p>
-                    <p>Existe um tipo especial de colágeno que o seu corpo consegue absorver.</p>
-                    <p>São colágenos hidrolisados premium.</p>
-                    <p>Esta forma premium de colágeno reúne vários aminoácidos.</p>
-                    <p>Ao ingerir, o seu corpo vai dividir em componentes básicos que ele usa para recriar o próprio colágeno!</p>
-                    <p>O aproveitamento é de quase 90%, um índice muito superior a outros tipos de colágeno..</p>
-                    <p>Dessa forma, você tira o máximo proveito de cada molécula…</p>
-                    <p>E aumenta a capacidade do corpo de produzir colágeno novo e saudável.</p>
-                    <p>E o resultado do colágeno, você já deve ter ouvido falar.</p>
-                    <p>Sua pele fica mais firme, lisa e suave.</p>
-                    <p>E justamente por isso…</p>
-                    <p>Suspeitei que se combinássemos o Licopeno, a Vitamina C e o tipo certo de Colágeno Hidrolisado… Nós teríamos a solução definitiva no combate à Pele Crepe.</p>
-                    <p>Uma solução que funciona quase instantaneamente…</p>
-                    <p>Dando a você resultados surpreendentes, que você pode ver, tocar e sentir.</p>
-                    <p>Mas estes são apenas alguns nutrientes da lista do Dr. Rafael. </p>
-                    <p>A lista completa, será fornecida ao final deste vídeo.</p>
-                    <p>E o MAIS INCRÍVEL vem agora!</p>
-                    <p>E tenho certeza que valerá a pena ter chegado até aqui.</p>
-                    <p>Afinal, hidratantes não funcionam nesse tipo de pele.</p>
-                    <p>E quem tem tempo para ficar buscando por compostos específicos?  Fora que alguns destes ingredientes são raros e podem ser um pouco difíceis de encontrar na sua cidade...</p>
-                    <p>Surgiu então uma solução melhor...</p>
-                        
+                        <img src="image/image10.jpg" alt="" class="imagens4">
 
-
-                    <p>Dr. Rafael</p>
-                    <p>Eu classifiquei os compostos, do mais potente para o menos potente.</p>
-                    <p>Verifiquei a dosagem de cada um deles - exatamente como estava nos artigos científicos. </p>
-                    <p>E fui até um laboratório de minha confiança, para criar uma fórmula que atendesse à minha expectativa.</p>
-                    <p>Eliminei os ingredientes que não atendessem aos meus critérios de qualidade, E também me certifiquei de que todas as instalações do laboratório fossem aprovadas pela ANVISA. </p>
-                    <p>E por que eu sou tão exigente com a qualidade e pureza dos compostos? </p>
-                    <p>É simples... eu tenho pacientes reais, com problemas reais!</p>
+                        <p>Só que não adianta sair por aí tomando o colágeno comum e achar que isso vai te ajudar a combater as rugas.</p>
+                        <p>O motivo é simples: a molécula de colágeno é grande demais para ser absorvida.</p>
+                        <p>E algumas marcas de baixa qualidade podem ter colágeno que são eliminados na digestão.</p>
+                        <p>Se você está tomando colágeno 3 vezes ao dia e não está vendo resultados, agora já sabe o motivo.</p>
+                        <p>Mas calma…Felizmente há uma saída.</p>
+                        <p>Existe um tipo especial de colágeno que o seu corpo consegue absorver.</p>
+                        <p>São colágenos hidrolisados premium.</p>
+                        <p>Esta forma premium de colágeno reúne vários aminoácidos.</p>
+                        <p>Ao ingerir, o seu corpo vai dividir em componentes básicos que ele usa para recriar o próprio colágeno!</p>
+                        <p>O aproveitamento é de quase 90%, um índice muito superior a outros tipos de colágeno..</p>
+                        <p>Dessa forma, você tira o máximo proveito de cada molécula…</p>
+                        <p>E aumenta a capacidade do corpo de produzir colágeno novo e saudável.</p>
+                        <p>E o resultado do colágeno, você já deve ter ouvido falar.</p>
+                        <p>Sua pele fica mais firme, lisa e suave.</p>
+                        <p>E justamente por isso…</p>
+                        <p>Suspeitei que se combinássemos o Licopeno, a Vitamina C e o tipo certo de Colágeno Hidrolisado… Nós teríamos a solução definitiva no combate à Pele Crepe.</p>
+                        <p>Uma solução que funciona quase instantaneamente…</p>
+                        <p>Dando a você resultados surpreendentes, que você pode ver, tocar e sentir.</p>
+                        <p>Mas estes são apenas alguns nutrientes da lista do Dr. Rafael. </p>
+                        <p>A lista completa, será fornecida ao final deste vídeo.</p>
+                        <p>E o MAIS INCRÍVEL vem agora!</p>
+                        <p>E tenho certeza que valerá a pena ter chegado até aqui.</p>
+                        <p>Afinal, hidratantes não funcionam nesse tipo de pele.</p>
+                        <p>E quem tem tempo para ficar buscando por compostos específicos? Fora que alguns destes ingredientes são raros e podem ser um pouco difíceis de encontrar na sua cidade...</p>
+                        <p>Surgiu então uma solução melhor...</p>
 
 
-                    <p>Assim, o Dr. Rafael criou sua própria fórmula que hidrata e recupera a pele, de dentro para fora.</p>
-                    <p>E recrutou 258 pessoas, que sofriam com pele fina e flácida, rugas, e que estavam insatisfeitas para testá-lo.</p>
-                    <p> Bem, depois de 8 semanas, quando recebeu os resultados dos testes clínicos, ele ficou em choque!</p>
-                    <p>Os resultados foram ainda mais positivos do que imaginávamos...</p>
 
-                    <ul>
-                        <li>93% das usuárias relataram um toque mais macio na pele,</li>
-                        <li>89% disseram que a pele está com mais vida,</li>
-                        <li>93% dos usuários comentaram sentir a pele mais firme e lisa, </li>
-                        <li>95% disseram que outras pessoas comentaram ou questionaram sobre sua aparência; </li>
-                        <li>89% afirmaram que estão se surpreendendo cada vez que se olham no espelho.</li>
-                        <li>e simplesmente 96% das usuárias confessaram que estão mais confiantes!</li>
-                    </ul>
+                        <p>Dr. Rafael</p>
+                        <p>Eu classifiquei os compostos, do mais potente para o menos potente.</p>
+                        <p>Verifiquei a dosagem de cada um deles - exatamente como estava nos artigos científicos. </p>
+                        <p>E fui até um laboratório de minha confiança, para criar uma fórmula que atendesse à minha expectativa.</p>
+                        <p>Eliminei os ingredientes que não atendessem aos meus critérios de qualidade, E também me certifiquei de que todas as instalações do laboratório fossem aprovadas pela ANVISA. </p>
+                        <p>E por que eu sou tão exigente com a qualidade e pureza dos compostos? </p>
+                        <p>É simples... eu tenho pacientes reais, com problemas reais!</p>
 
-                    <p>Exatamente, 9 em cada 10 pessoas aprovaram esta fórmula do Dr. Rafael.</p>
-                    <p>Diante disso, não restaram dúvidas.</p>
-                    <p>Reunimos todos os compostos do Dr. Rafael, numa fórmula em cápsula, super concentrada, para restaurar e recuperar a hidratação da pele, e a chamamos de Active Anti-Ox.</p>
-                    <p>Essa fórmula já está ajudando brasileiras em várias partes do país a sentir uma diferença enorme ao tocar na pele.</p>
-                    <p>Veja imagens dos braços da Sueli:</p>
-                    <p>Antes, sua pele tinha uma textura crespa, fina e seca. </p>
-                    <p>Só que agora ela conseguiu reverter quase todos os sintomas da Pele Crepe.</p>
-                    <p>Sua pele está mais lisa e hidratada. </p>
-                    <p>Essa é a Maria Cecília, depois de usar nossa fórmula para corrigir o pescoço, suas linhas finas estão muito mais suaves.</p>
-                    <p>Suas rugas, antes profundas, agora estão quase invisíveis e sua pele que era flácida está mais esticada. </p>
-                    <p>Quando você compara essas duas fotos… </p>
-                    <p>Difícil pensar que são da mesma pessoa.</p>
-                    <p>A mulher da direita parece 10 anos mais jovem. </p>
-                    <p>Agora dá uma olhada nos braços da Lourdes. </p>
-                    <p>Não apenas sua pele está mais firme, como as linhas e dobras praticamente desapareceram. </p>
-                    <p>O Dr. Rafael também ficou surpreso com o fato de como a pele "voltou para o lugar", segundo ele, esse é um sinal claro do aumento de elastina. </p>
-                    <p>E agora a Lourdes nos contou que não vai ficar mais trancada em casa, vai sair para viver a vida. </p>
-                    <p>Esse é o tipo de resultado que quero que você experimente. </p>
-                    <p>Isso tudo aconteceu depois de tomar o Active Anti-Ox por algumas semanas. </p>
-                    <p>Mas eu preciso ser sincero.</p>
-                    <p>Cada organismo é único, e os resultados podem variar.</p>
-                    <p>Por isso nós incentivamos que você faça o teste e tire suas próprias conclusões.</p>
-                    <p>E quando sua pele estiver firme, lisa e hidratada…você vai se sentir confiante para a usar a roupa que quiser…e pode ter uma experiência que chamamos de “Efeito Nova Embalagem".</p>
-                    <p>Isso acontece quando você se sente jovem tanto por dentro, quanto por fora.</p>
-                    <p>Quando as pessoas ao seu redor passam a notar uma mudança em você, alguns vão pensar até que você fez plástica.</p>
-                    <p>E por falar em cuidar de si mesma. </p>
-                    <p>Pense em você agora, existe alguma área específica no seu corpo que você gostaria de transformar? </p>
-                    <p>É importante reforçar que o Active Anti-Ox é capaz de agir em todas as partes do seu corpo: mãos, braços, colo, joelhos e até nos pés. </p>
-                    <p>Isso porque essa fórmula rejuvenesce e hidrata sua pele, de dentro para fora. </p>
-                    <p>Agora, imagine a sensação prazerosa de tocar os dedos e sentir sua pele mais lisa e macia. </p>
-                    <p>Imagine não sentir mais aquela descamação e flacidez da pele…e passar a sentir uma nova e prazerosa sensação de bem estar, ao notar uma pele mais hidratada e viva. </p>
-                    <p>Isso é o que vai acontecer, usando o Active Anti-Ox.</p>
-                    <p>Eu estou ansiosa para que você experimente essas sensações. </p>
-                    <p>Então, se você já ficou desapontada com outros produtos no passado, agora você entende por que eles não funcionaram. </p>
-                    <p>Não é culpa sua.</p>
-                    <p>Lembre-se, como parte da pesquisa do Doutor Rafael para desenvolver esta fórmula…. ele testou centenas de cremes que afirmam fazer o que o Active Anti-Ox faz…e basta uma olhada mais profunda na lista de ingredientes, para ver que eles
-                        não são nada além de hidratantes comuns. </p>
-                    <p>Mesmo assim, alguns desses cremes são vendidos em lojas caras por mais de R$ 400,00, apenas por causa de uma etiqueta chique. </p>
-                    <p>Por isso, não ficamos surpresos quando várias mulheres nos disseram que pagariam com prazer, mais de R$ 400,00 pela transformação que experimentaram com o Active Anti-Ox. </p>
-                    <p>Mas veja, você não vai encontrar os produtos da Doutor Nature em farmácias ou lojas físicas.</p>
-                    <p>E também não vai pagar R$ 400,00 pelo Active Anti-Ox. </p>
-                    <p>Mesmo que nossos produtos sejam usado por artistas e blogueiras famosas... </p>
-                    <p>A Doutor Nature não abre mão da sua missão de tornar os tratamentos naturais mais avançados acessíveis a todas as pessoas.</p>
-                    <p>Por isso, vendemos o Active Anti-Ox online, diretamente para as nossas clientes, para evitar que intermediários aumentem o preço. </p>
-                    <p>E também não gastamos com propagandas caras na TV. </p>
-                    <p>Em vez disso…</p>
-                    <p>O Dr Rafael faz vídeos como este e conta a experiência de suas clientes satisfeitas para ajudar a divulgar nossos produtos. </p>
-                    <p>Nós acreditamos que se um produto faz o que ele promete…</p>
-                    <p>O boca a boca vai torná-lo conhecido. </p>
-                    <p>E, até agora, essa estratégia tem funcionado. </p>
-                    <p>O Active Anti-Ox é uma fórmula popular, inclusive entre celebridades. </p>
-                    <p>E devido ao volume de vendas , podemos cobrar um valor justo por ele.</p>
-                    <p>Então, você não vai pagar R$ 400,00 para ter uma pele lisa, firme e hidratada. </p>
-                    <p>Na verdade, você não vai pagar nem metade desse valor. </p>
-                    <p>Agora mesmo o Active Anti-Ox está sendo vendido em nosso site por menos de um cafezinho por dia.</p>
-                    <p>Clicando no botão abaixo, você será direcionado para nossa página, e poderá fazer o seu pedido.</p>
-                    <p>E lembre-se, recomendamos que você faça o pedido de 6 caixas, que corresponde a 6 meses de tratamento…</p>
-                    <p>Assim terá um desconto adicional que compensa muito.</p>
-                    <p>Caso queira economizar mais ainda, marque a opção assinatura. </p>
-                    <p>Essa é a forma de compra mais inteligente. </p>
-                    <p>Funciona assim: se você optar pelo pacote de 6 caixas, e marcar a opção assinatura, depois de 6 meses, quando seu estoque estiver quase acabando, vamos enviar para sua casa um novo lote.</p>
-                    <p>Fazemos isso como um benefício, já que a maioria de nossas clientes repetem a compra dos nossos produtos. </p>
-                    <p>Mas eu admito: nós estamos oferecendo esses descontos por uma razão egoísta. </p>
-                    <p>Sabemos que depois de usar o Active Anti-Ox, sua pele vai ficar mais bonita e hidratada.</p>
-                    <p>E quando as suas amigas notarem a diferença em você, também vão querer saber o que você fez para parecer tão jovem.</p>
-                    <p>Contamos com você para divulgar o Active Anti-Ox e para transformar a vida de outras mulheres.</p>
-                    <p>Mas tem um detalhe, talvez o mais importante…</p>
-                    <p>Clicando no botão que está aparecendo abaixo, você será direcionada para uma página que oferece uma condição de preço única. </p>
-                    <p>É simplesmente o preço mais baixo que praticamos. Em nosso site o Active Anti Ox está no preço normal.</p>
-                    <p>A essa altura, você já entendeu que cremes hidratantes não vão funcionar no seu tipo de pele.</p>
-                    <p>E esta é a sua chance de experimentar o Active Anti-Ox, economizando muito. </p>
-                    <p>Clique no botão abaixo para escolher seu pacote de desconto. </p>
 
-                    <div class="row justify-content-center">
-                        <div class="col-md-11 box-destaque">
-                            <p>Lembre-se de que o Active Anti-Ox tem a nossa garantia de reembolso. </p>
-                            <p>E se você não se surpreender com os resultados…</p>
-                            <p>Se não se sentir mais confiante para usar vestidos um pouco decotados …</p>
-                            <p>Ou se ainda sentir vergonha de usar uma roupa mais curta quando for sair…</p>
-                            <p>Basta devolver o Active Anti-Ox e vamos reembolsá-la, em forma de créditos na Doutor Nature. </p>
-                            <p>Sem perguntas. </p>
-                            <p>Sem qualquer constrangimento.</p>
+                        <p>Assim, o Dr. Rafael criou sua própria fórmula que hidrata e recupera a pele, de dentro para fora.</p>
+                        <p>E recrutou 258 pessoas, que sofriam com pele fina e flácida, rugas, e que estavam insatisfeitas para testá-lo.</p>
+                        <p> Bem, depois de 8 semanas, quando recebeu os resultados dos testes clínicos, ele ficou em choque!</p>
+                        <p>Os resultados foram ainda mais positivos do que imaginávamos...</p>
+
+                        <ul>
+                            <li>93% das usuárias relataram um toque mais macio na pele,</li>
+                            <li>89% disseram que a pele está com mais vida,</li>
+                            <li>93% dos usuários comentaram sentir a pele mais firme e lisa, </li>
+                            <li>95% disseram que outras pessoas comentaram ou questionaram sobre sua aparência; </li>
+                            <li>89% afirmaram que estão se surpreendendo cada vez que se olham no espelho.</li>
+                            <li>e simplesmente 96% das usuárias confessaram que estão mais confiantes!</li>
+                        </ul>
+
+                        <p>Exatamente, 9 em cada 10 pessoas aprovaram esta fórmula do Dr. Rafael.</p>
+                        <p>Diante disso, não restaram dúvidas.</p>
+                        <p>Reunimos todos os compostos do Dr. Rafael, numa fórmula em cápsula, super concentrada, para restaurar e recuperar a hidratação da pele, e a chamamos de Active Anti-Ox.</p>
+                        <p>Essa fórmula já está ajudando brasileiras em várias partes do país a sentir uma diferença enorme ao tocar na pele.</p>
+                        <p>Veja imagens dos braços da Sueli:</p>
+                        <p>Antes, sua pele tinha uma textura crespa, fina e seca. </p>
+                        <p>Só que agora ela conseguiu reverter quase todos os sintomas da Pele Crepe.</p>
+                        <p>Sua pele está mais lisa e hidratada. </p>
+                        <p>Essa é a Maria Cecília, depois de usar nossa fórmula para corrigir o pescoço, suas linhas finas estão muito mais suaves.</p>
+                        <p>Suas rugas, antes profundas, agora estão quase invisíveis e sua pele que era flácida está mais esticada. </p>
+                        <p>Quando você compara essas duas fotos… </p>
+                        <p>Difícil pensar que são da mesma pessoa.</p>
+                        <p>A mulher da direita parece 10 anos mais jovem. </p>
+                        <p>Agora dá uma olhada nos braços da Lourdes. </p>
+                        <p>Não apenas sua pele está mais firme, como as linhas e dobras praticamente desapareceram. </p>
+                        <p>O Dr. Rafael também ficou surpreso com o fato de como a pele "voltou para o lugar", segundo ele, esse é um sinal claro do aumento de elastina. </p>
+                        <p>E agora a Lourdes nos contou que não vai ficar mais trancada em casa, vai sair para viver a vida. </p>
+                        <p>Esse é o tipo de resultado que quero que você experimente. </p>
+                        <p>Isso tudo aconteceu depois de tomar o Active Anti-Ox por algumas semanas. </p>
+                        <p>Mas eu preciso ser sincero.</p>
+                        <p>Cada organismo é único, e os resultados podem variar.</p>
+                        <p>Por isso nós incentivamos que você faça o teste e tire suas próprias conclusões.</p>
+                        <p>E quando sua pele estiver firme, lisa e hidratada…você vai se sentir confiante para a usar a roupa que quiser…e pode ter uma experiência que chamamos de “Efeito Nova Embalagem".</p>
+                        <p>Isso acontece quando você se sente jovem tanto por dentro, quanto por fora.</p>
+                        <p>Quando as pessoas ao seu redor passam a notar uma mudança em você, alguns vão pensar até que você fez plástica.</p>
+                        <p>E por falar em cuidar de si mesma. </p>
+                        <p>Pense em você agora, existe alguma área específica no seu corpo que você gostaria de transformar? </p>
+                        <p>É importante reforçar que o Active Anti-Ox é capaz de agir em todas as partes do seu corpo: mãos, braços, colo, joelhos e até nos pés. </p>
+                        <p>Isso porque essa fórmula rejuvenesce e hidrata sua pele, de dentro para fora. </p>
+                        <p>Agora, imagine a sensação prazerosa de tocar os dedos e sentir sua pele mais lisa e macia. </p>
+                        <p>Imagine não sentir mais aquela descamação e flacidez da pele…e passar a sentir uma nova e prazerosa sensação de bem estar, ao notar uma pele mais hidratada e viva. </p>
+                        <p>Isso é o que vai acontecer, usando o Active Anti-Ox.</p>
+                        <p>Eu estou ansiosa para que você experimente essas sensações. </p>
+                        <p>Então, se você já ficou desapontada com outros produtos no passado, agora você entende por que eles não funcionaram. </p>
+                        <p>Não é culpa sua.</p>
+                        <p>Lembre-se, como parte da pesquisa do Doutor Rafael para desenvolver esta fórmula…. ele testou centenas de cremes que afirmam fazer o que o Active Anti-Ox faz…e basta uma olhada mais profunda na lista de ingredientes, para ver que
+                            eles não são nada além de hidratantes comuns. </p>
+                        <p>Mesmo assim, alguns desses cremes são vendidos em lojas caras por mais de R$ 400,00, apenas por causa de uma etiqueta chique. </p>
+                        <p>Por isso, não ficamos surpresos quando várias mulheres nos disseram que pagariam com prazer, mais de R$ 400,00 pela transformação que experimentaram com o Active Anti-Ox. </p>
+                        <p>Mas veja, você não vai encontrar os produtos da Doutor Nature em farmácias ou lojas físicas.</p>
+                        <p>E também não vai pagar R$ 400,00 pelo Active Anti-Ox. </p>
+                        <p>Mesmo que nossos produtos sejam usado por artistas e blogueiras famosas... </p>
+                        <p>A Doutor Nature não abre mão da sua missão de tornar os tratamentos naturais mais avançados acessíveis a todas as pessoas.</p>
+                        <p>Por isso, vendemos o Active Anti-Ox online, diretamente para as nossas clientes, para evitar que intermediários aumentem o preço. </p>
+                        <p>E também não gastamos com propagandas caras na TV. </p>
+                        <p>Em vez disso…</p>
+                        <p>O Dr Rafael faz vídeos como este e conta a experiência de suas clientes satisfeitas para ajudar a divulgar nossos produtos. </p>
+                        <p>Nós acreditamos que se um produto faz o que ele promete…</p>
+                        <p>O boca a boca vai torná-lo conhecido. </p>
+                        <p>E, até agora, essa estratégia tem funcionado. </p>
+                        <p>O Active Anti-Ox é uma fórmula popular, inclusive entre celebridades. </p>
+                        <p>E devido ao volume de vendas , podemos cobrar um valor justo por ele.</p>
+                        <p>Então, você não vai pagar R$ 400,00 para ter uma pele lisa, firme e hidratada. </p>
+                        <p>Na verdade, você não vai pagar nem metade desse valor. </p>
+                        <p>Agora mesmo o Active Anti-Ox está sendo vendido em nosso site por menos de um cafezinho por dia.</p>
+                        <p>Clicando no botão abaixo, você será direcionado para nossa página, e poderá fazer o seu pedido.</p>
+                        <p>E lembre-se, recomendamos que você faça o pedido de 6 caixas, que corresponde a 6 meses de tratamento…</p>
+                        <p>Assim terá um desconto adicional que compensa muito.</p>
+                        <p>Caso queira economizar mais ainda, marque a opção assinatura. </p>
+                        <p>Essa é a forma de compra mais inteligente. </p>
+                        <p>Funciona assim: se você optar pelo pacote de 6 caixas, e marcar a opção assinatura, depois de 6 meses, quando seu estoque estiver quase acabando, vamos enviar para sua casa um novo lote.</p>
+                        <p>Fazemos isso como um benefício, já que a maioria de nossas clientes repetem a compra dos nossos produtos. </p>
+                        <p>Mas eu admito: nós estamos oferecendo esses descontos por uma razão egoísta. </p>
+                        <p>Sabemos que depois de usar o Active Anti-Ox, sua pele vai ficar mais bonita e hidratada.</p>
+                        <p>E quando as suas amigas notarem a diferença em você, também vão querer saber o que você fez para parecer tão jovem.</p>
+                        <p>Contamos com você para divulgar o Active Anti-Ox e para transformar a vida de outras mulheres.</p>
+                        <p>Mas tem um detalhe, talvez o mais importante…</p>
+                        <p>Clicando no botão que está aparecendo abaixo, você será direcionada para uma página que oferece uma condição de preço única. </p>
+                        <p>É simplesmente o preço mais baixo que praticamos. Em nosso site o Active Anti Ox está no preço normal.</p>
+                        <p>A essa altura, você já entendeu que cremes hidratantes não vão funcionar no seu tipo de pele.</p>
+                        <p>E esta é a sua chance de experimentar o Active Anti-Ox, economizando muito. </p>
+                        <p>Clique no botão abaixo para escolher seu pacote de desconto. </p>
+
+                        <a href="#" class="btn-ckt">Quero experimentar!</a>
+
+                        <div class="row justify-content-center">
+                            <div class="col-md-11 box-destaque">
+                                <p>Lembre-se de que o Active Anti-Ox tem a nossa garantia de reembolso. </p>
+                            </div>
                         </div>
-                    </div>
 
-                    <p>Eu quero que você use e tire as suas próprias conclusões sobre o Active Anti-Ox. </p>
-                    <p>Use o quanto precisar. </p>
-                    <p>Se você não adorar os resultados que tiver… </p>
-                    <p>Se sua pele fina, flácida e enrugada não se transformar em uma pele com volume, firmeza e menos rugas…</p>
-                    <p>Concederemos um crédito, no valor total que você investiu. </p>
-                    <p>Tudo que você precisa fazer é nos enviar um e-mail, ou ligar para: 4003-5219 que iremos liberar esse crédito, para você escolher qualquer outro produto digital da Doutor Nature.</p>
-                    <p>Estou oferecendo essa garantia porque tenho certeza de que você vai amar sua pele com o Active Anti-Ox. </p>
-                    <p>Clique agora, no botão abaixo e experimente o Active Anti Ox, sem risco. </p>
+                        <p>E se você não se surpreender com os resultados…</p>
+                        <p>Se não se sentir mais confiante para usar vestidos um pouco decotados …</p>
+                        <p>Ou se ainda sentir vergonha de usar uma roupa mais curta quando for sair…</p>
+                        <p>Basta devolver o Active Anti-Ox e vamos reembolsá-la, em forma de créditos na Doutor Nature. </p>
+                        <p>Sem perguntas. </p>
+                        <p>Sem qualquer constrangimento.</p>
+                        <p>Eu quero que você use e tire as suas próprias conclusões sobre o Active Anti-Ox. </p>
+                        <p>Use o quanto precisar. </p>
+                        <p>Se você não adorar os resultados que tiver… </p>
+                        <p>Se sua pele fina, flácida e enrugada não se transformar em uma pele com volume, firmeza e menos rugas…</p>
+                        <p>Concederemos um crédito, no valor total que você investiu. </p>
+                        <p>Tudo que você precisa fazer é nos enviar um e-mail, ou ligar para: 4003-5219 que iremos liberar esse crédito, para você escolher qualquer outro produto digital da Doutor Nature.</p>
+                        <p>Estou oferecendo essa garantia porque tenho certeza de que você vai amar sua pele com o Active Anti-Ox. </p>
+                        <p>Clique agora, no botão abaixo e experimente o Active Anti Ox, sem risco. </p>
 
-                    <a href="#" class="btn-ckt">Quero experimentar!</a>
+                        <a href="#" class="btn-ckt">Quero experimentar!</a>
 
-                    <p>Nosso site é criptografado com os mesmos recursos de segurança usados pela Amazon e pela Apple para que seus dados estejam 100% protegidos. </p>
-                    <p>E antes de finalizar sua compra…</p>
-                    <p>Certifique de marcar a opção assinatura, para garantir comodidade e economizar obtendo o preço mais baixo que praticamos.</p>
-                    <p>Antes de terminar…</p>
-                    <p>Eu gostaria de dizer sobre o que vai acontecer se você não agir agora. </p>
-                    <p>E o fato é que sua pele vai continuar perdendo água, hidratação. </p>
-                    <p>E com menos água, também vai despencar sua produção de proteínas estruturais como o colágeno e a elastina.</p>
-                    <p>O resultado disso é sua pele cada dia mais seca, sem vida, com risco de ceder ao ponto de não voltar mais para o lugar depois de esticada. </p>
-                    <p>Com menos colágeno, a sua pele perde estrutura. </p>
-                    <p>Ela fica frágil, fraca e começa a ter linhas finas e rugas profundas na superfície. </p>
-                    <p>Enquanto isso, você está perdendo células na epiderme.</p>
-                    <p>O que provoca rachaduras, e faz sua pele parecer fina, enrugada e envelhecida.</p>
-                    <p>Uma pele fina não consegue reter água, fazendo com que ela pareça mais seca, áspera e danificada.</p>
-                    <p>Não importa quantos hidratantes você aplique. </p>
-                    <p>Por isso, se você não agir agora, esses sintomas só vão piorar com o tempo.</p>
-                    <p>Essa “pele crepe”, vai começar a aparecer e invadir outras partes do seu corpo. </p>
-                    <p>E verdade seja dita, a Pele Crepe não passa despercebida.</p>
-                    <p>Esse tipo de pele te faz parecer anos mais velha do que realmente é, às vezes, décadas. </p>
-                    <p>Agora, por outro lado, eu gostaria que você se imaginasse olhando no espelho e amando ver a pele firme, jovem e saudável do seu pescoço, braços, pernas e colo. </p>
-                    <p>Uma pele com mais beleza e suavidade que há tempos você não vê. </p>
-                    <p>Uma pele que não precisa ser coberta com roupas. </p>
-                    <p>Imagine ser capaz de usar o que você quiser: shorts, tops, saias curtas e vestidos decotados.</p>
-                    <p>Você vai escolher o que quiser vestir sem se preocupar em esconder a pele.</p>
-                    <p>E há apenas uma palavra para esse sentimento: liberdade. </p>
-                    <p>Quando a pele do seu corpo voltar a ter vida, aparentar saúde e ficar bonita</p>
-                    <p>Você vai se sentir jovem, atraente e livre. </p>
-                    <p>Imagine se olhar no espelho e ver a mesma mulher cheia de vida que você sempre foi.</p>
-                    <p>Pense como seria, seu marido voltar a ter olhos só para você, te elogiar.</p>
-                    <p>Quando você gosta do que vê no espelho…todos ao seu redor percebem. </p>
-                    <p>Agora é o momento de você fazer algo positivo por você mesma. </p>
-                    <p>Ao clicar no botão que está logo abaixo desta página…</p>
-                    <p>Você terá a chance de experimentar uma solução que funcionou para várias mulheres, com histórias parecidas com a sua. </p>
-                    <p>E eu quero que você sinta o que elas estão sentindo agora. </p>
-                    <p>Basta clicar no botão para começar essa mudança na sua vida. </p>
-                    <p>Você não corre nenhum risco em experimentar o Active Anti-Ox. </p>
-                    <p>Isso porque você está coberta por uma garantia.</p>
-                    <p>E além disso você vai receber o maior desconto possível porque está vendo este vídeo. </p>
-                    <p>Então não perca tempo. </p>
-                    <p>Chega de adiar a felicidade que você merece.</p>
-                    <p>Agradeço por permanecer comigo durante esta apresentação. </p>
-                    <p>Sei que seu tempo é valioso e fico feliz que você tenha passado um pouco dele comigo. </p>
-                    <p>Trabalhamos pela sua beleza e felicidade </p>
-                    <p>Somos a Doutor Nature.</p>
-                    <p>…</p>
-                    <p>Opa…</p>
-                    <p>Você ainda está aqui?</p>
-                    <p>Então me deixe responder às perguntas mais comuns que recebemos sobre o Active Anti-Ox. </p>
+                        <p>Nosso site é criptografado com os mesmos recursos de segurança usados pela Amazon e pela Apple para que seus dados estejam 100% protegidos. </p>
+                        <p>E antes de finalizar sua compra…</p>
+                        <p>Certifique de marcar a opção assinatura, para garantir comodidade e economizar obtendo o preço mais baixo que praticamos.</p>
+                        <p>Antes de terminar…</p>
+                        <p>Eu gostaria de dizer sobre o que vai acontecer se você não agir agora. </p>
+                        <p>E o fato é que sua pele vai continuar perdendo água, hidratação. </p>
+                        <p>E com menos água, também vai despencar sua produção de proteínas estruturais como o colágeno e a elastina.</p>
+                        <p>O resultado disso é sua pele cada dia mais seca, sem vida, com risco de ceder ao ponto de não voltar mais para o lugar depois de esticada. </p>
+                        <p>Com menos colágeno, a sua pele perde estrutura. </p>
+                        <p>Ela fica frágil, fraca e começa a ter linhas finas e rugas profundas na superfície. </p>
+                        <p>Enquanto isso, você está perdendo células na epiderme.</p>
+                        <p>O que provoca rachaduras, e faz sua pele parecer fina, enrugada e envelhecida.</p>
+                        <p>Uma pele fina não consegue reter água, fazendo com que ela pareça mais seca, áspera e danificada.</p>
+                        <p>Não importa quantos hidratantes você aplique. </p>
+                        <p>Por isso, se você não agir agora, esses sintomas só vão piorar com o tempo.</p>
+                        <p>Essa “pele crepe”, vai começar a aparecer e invadir outras partes do seu corpo. </p>
+                        <p>E verdade seja dita, a Pele Crepe não passa despercebida.</p>
+                        <p>Esse tipo de pele te faz parecer anos mais velha do que realmente é, às vezes, décadas. </p>
+                        <p>Agora, por outro lado, eu gostaria que você se imaginasse olhando no espelho e amando ver a pele firme, jovem e saudável do seu pescoço, braços, pernas e colo. </p>
+                        <p>Uma pele com mais beleza e suavidade que há tempos você não vê. </p>
+                        <p>Uma pele que não precisa ser coberta com roupas. </p>
+                        <p>Imagine ser capaz de usar o que você quiser: shorts, tops, saias curtas e vestidos decotados.</p>
+                        <p>Você vai escolher o que quiser vestir sem se preocupar em esconder a pele.</p>
+                        <p>E há apenas uma palavra para esse sentimento: liberdade. </p>
+                        <p>Quando a pele do seu corpo voltar a ter vida, aparentar saúde e ficar bonita</p>
+                        <p>Você vai se sentir jovem, atraente e livre. </p>
+                        <p>Imagine se olhar no espelho e ver a mesma mulher cheia de vida que você sempre foi.</p>
+                        <p>Pense como seria, seu marido voltar a ter olhos só para você, te elogiar.</p>
+                        <p>Quando você gosta do que vê no espelho…todos ao seu redor percebem. </p>
+                        <p>Agora é o momento de você fazer algo positivo por você mesma. </p>
+                        <p>Ao clicar no botão que está logo abaixo desta página…</p>
+                        <p>Você terá a chance de experimentar uma solução que funcionou para várias mulheres, com histórias parecidas com a sua. </p>
+                        <p>E eu quero que você sinta o que elas estão sentindo agora. </p>
+                        <p>Basta clicar no botão para começar essa mudança na sua vida. </p>
+                        <p>Você não corre nenhum risco em experimentar o Active Anti-Ox. </p>
+                        <p>Isso porque você está coberta por uma garantia.</p>
+                        <p>E além disso você vai receber o maior desconto possível porque está vendo este vídeo. </p>
+                        <p>Então não perca tempo. </p>
+                        <p>Chega de adiar a felicidade que você merece.</p>
+                        <p>Agradeço por permanecer comigo durante esta apresentação. </p>
+                        <p>Sei que seu tempo é valioso e fico feliz que você tenha passado um pouco dele comigo. </p>
+                        <p>Trabalhamos pela sua beleza e felicidade </p>
+                        <p>Somos a Doutor Nature.</p>
+                        <p>…</p>
+                        <p>Opa…</p>
+                        <p>Você ainda está aqui?</p>
+                        <p>Então me deixe responder às perguntas mais comuns que recebemos sobre o Active Anti-Ox. </p>
 
-                    <h1 class="titulo">O que é o Active Anti-Ox? </h1>
+                        <h1 class="titulo">O que é o Active Anti-Ox? </h1>
 
-                    <p>Active Anti-Ox é uma fórmula projetada para reparar os sintomas da Pele Crepe em qualquer parte do corpo. </p>
-                    <p>Ele é uma pequena cápsula que você vai ingerir com facilidade uma vez ao dia.</p>
-                    <p>E o mais importante…</p>
-                    <p>Ele usa ingredientes poderosos que combatem o envelhecimento, para te ajudar a ter uma pele firme e hidratada. </p>
-                    <p>A maioria das mulheres que usam Active Anti-Ox dizem ver resultados rápidos no pescoço, colo, braços e pernas. </p>
-                    <p>Os ingredientes contidos no Active Anti-Ox são:</p>
+                        <p>Active Anti-Ox é uma fórmula projetada para reparar os sintomas da Pele Crepe em qualquer parte do corpo. </p>
+                        <p>Ele é uma pequena cápsula que você vai ingerir com facilidade uma vez ao dia.</p>
+                        <p>E o mais importante…</p>
+                        <p>Ele usa ingredientes poderosos que combatem o envelhecimento, para te ajudar a ter uma pele firme e hidratada. </p>
+                        <p>A maioria das mulheres que usam Active Anti-Ox dizem ver resultados rápidos no pescoço, colo, braços e pernas. </p>
+                        <p>Os ingredientes contidos no Active Anti-Ox são:</p>
 
-                    <ul>
-                        <li>Licopeno: Ele reduz drasticamente a formação do DHT, o hormônio que provoca rachaduras na sua pele e leva à perda da hidratação;</li>
-                        <li>Colágeno hidrolisado: fornece ao corpo aminoácidos que são essenciais para a formação saudável do colágeno na pele, ajudando a dar um aspecto mais macio e saudável;</li>
-                        <li>Vitamina E: aumenta a produção de energia celular para que o corpo possa produzir mais colágeno e outras proteínas estruturais;</li>
-                        <li>Vitamina C: um potente antioxidante que age no metabolismo do colágeno para aumentar a produção de proteínas estruturais;</li>
-                        <li>Selênio: trabalha na proteção da célula contra diferentes tipos de danos causados pelos radicais livres.</li>
-                    </ul>
+                        <ul>
+                            <li>Licopeno: Ele reduz drasticamente a formação do DHT, o hormônio que provoca rachaduras na sua pele e leva à perda da hidratação;</li>
+                            <li>Colágeno hidrolisado: fornece ao corpo aminoácidos que são essenciais para a formação saudável do colágeno na pele, ajudando a dar um aspecto mais macio e saudável;</li>
+                            <li>Vitamina E: aumenta a produção de energia celular para que o corpo possa produzir mais colágeno e outras proteínas estruturais;</li>
+                            <li>Vitamina C: um potente antioxidante que age no metabolismo do colágeno para aumentar a produção de proteínas estruturais;</li>
+                            <li>Selênio: trabalha na proteção da célula contra diferentes tipos de danos causados pelos radicais livres.</li>
+                        </ul>
 
 
 
-                    <p>Esses ingredientes vêm juntos para formar um complexo avançado de rejuvenescimento da pele.</p>
-                    <p>Ele vai te ajudar a firmar, hidratar e suavizar a pele do corpo e ter um aspecto mais jovem, radiante e saudável.</p>
+                        <p>Esses ingredientes vêm juntos para formar um complexo avançado de rejuvenescimento da pele.</p>
+                        <p>Ele vai te ajudar a firmar, hidratar e suavizar a pele do corpo e ter um aspecto mais jovem, radiante e saudável.</p>
 
-                    <h1 class="titulo">O que é Pele Crepe? </h1>
+                        <h1 class="titulo">O que é Pele Crepe? </h1>
 
-                    <p>O termo Pele Crepe se refere à pele com a textura fina e enrugada como a do papel crepom. </p>
-                    <p>Mas a Pele Crepe na verdade é um problema complexo porque tem vários sintomas diferentes e causa vários problemas no corpo como: pele do pescoço solta, flácida e com rugas profundas na horizontal. </p>
-                    <p>Joelhos ásperos e secos com várias dobras. </p>
-                    <p>Mãos e colo ressecados, com pele fina e rugas profundas. </p>
-                    <p>Braços caídos, enrugados e escamosos. </p>
+                        <p>O termo Pele Crepe se refere à pele com a textura fina e enrugada como a do papel crepom. </p>
+                        <p>Mas a Pele Crepe na verdade é um problema complexo porque tem vários sintomas diferentes e causa vários problemas no corpo como: pele do pescoço solta, flácida e com rugas profundas na horizontal. </p>
+                        <p>Joelhos ásperos e secos com várias dobras. </p>
+                        <p>Mãos e colo ressecados, com pele fina e rugas profundas. </p>
+                        <p>Braços caídos, enrugados e escamosos. </p>
 
-                    <h1 class="titulo">Para quem este produto foi projetado? </h1>
+                        <h1 class="titulo">Para quem este produto foi projetado? </h1>
 
-                    <p>Se você tem Pele Crepe no pescoço, braços ou em qualquer parte do corpo…</p>
-                    <p>O Active Anti-Ox pode te ajudar a reduzir e reverter esses sintomas.</p>
-                    <p>E incríveis 90% das mulheres que usaram o Active Anti-Ox ainda na fase de teste, relataram uma redução visível da Pele Crepe depois de tomar o Active Anti-Ox por apenas uma semana. </p>
-                    <p>Esta fórmula também pode ser usada para obter uma pele mais firme, volumosa e jovem no resto do corpo. </p>
-                    <p>Como por exemplo no rosto, ombros e em qualquer outro lugar.</p>
-                    <p>A verdade é que o Active Anti-Ox pode ajudar a melhorar a hidratação, elasticidade e maciez da pele de qualquer pessoa, em qualquer idade. </p>
-                    <p>Só que se você tiver mais de 40 anos, as mudanças em seu corpo podem provocar a Pele Crepe e se você não fizer nada a respeito, os sintomas vão piorar. </p>
+                        <p>Se você tem Pele Crepe no pescoço, braços ou em qualquer parte do corpo…</p>
+                        <p>O Active Anti-Ox pode te ajudar a reduzir e reverter esses sintomas.</p>
+                        <p>E incríveis 90% das mulheres que usaram o Active Anti-Ox ainda na fase de teste, relataram uma redução visível da Pele Crepe depois de tomar o Active Anti-Ox por apenas uma semana. </p>
+                        <p>Esta fórmula também pode ser usada para obter uma pele mais firme, volumosa e jovem no resto do corpo. </p>
+                        <p>Como por exemplo no rosto, ombros e em qualquer outro lugar.</p>
+                        <p>A verdade é que o Active Anti-Ox pode ajudar a melhorar a hidratação, elasticidade e maciez da pele de qualquer pessoa, em qualquer idade. </p>
+                        <p>Só que se você tiver mais de 40 anos, as mudanças em seu corpo podem provocar a Pele Crepe e se você não fizer nada a respeito, os sintomas vão piorar. </p>
 
-                    <h1 class="titulo">O que causa a Pele Crepe? </h1>
+                        <h1 class="titulo">O que causa a Pele Crepe? </h1>
 
-                    <p>Enquanto você envelhece, duas coisas começam a acontecer: </p>
-                    <p>Primeiro, seu corpo produz menos células na epiderme, a primeira camada da sua pele.</p>
-                    <p>Em seguida, sua pele fica mais fina, frágil e transparente.</p>
-                    <p>Depois, começam a aparecer rachaduras na epiderme enfraquecida, permitindo que a hidratação natural do seu corpo escape. </p>
-                    <p>A sua pele fica cada vez mais desidratada com a idade, e também é por isso que a Pele Crepe é seca, áspera e escamosa. </p>
-                    <p>Em segundo lugar, seu corpo produz menos fibras de proteína de colágeno e elastina. </p>
-                    <p>Com menos elastina, sua pele perde a capacidade de esticar e começa a rachar.</p>
-                    <p>Com menos fibras de colágeno, sua pele perde sua “estrutura” e não fica mais tão firme. </p>
-                    <p>É por isso que começam a aparecer rugas. </p>
-                    <p>Enquanto seu corpo produz cada vez menos células novas…</p>
-                    <p>A sua pele normal vira uma Pele Crepe - fina e seca.</p>
-                    <p>E a falta de colágeno e elastina fazem a sua Pele Crepe ficar flácida e enrugada. </p>
-                    <p>O Active Anti-Ox usa uma poderosa combinação de Licopeno e Vitamina C para reter a umidade e aumentar a hidratação, nutrindo as células da epiderme. </p>
-                    <p>Enquanto isso, o Colágeno Hidrolisado, a Vitamina E e o Selênio auxiliam na produção de colágeno para aumentar a saúde da rede de proteínas da sua pele. </p>
+                        <p>Enquanto você envelhece, duas coisas começam a acontecer: </p>
+                        <p>Primeiro, seu corpo produz menos células na epiderme, a primeira camada da sua pele.</p>
+                        <p>Em seguida, sua pele fica mais fina, frágil e transparente.</p>
+                        <p>Depois, começam a aparecer rachaduras na epiderme enfraquecida, permitindo que a hidratação natural do seu corpo escape. </p>
+                        <p>A sua pele fica cada vez mais desidratada com a idade, e também é por isso que a Pele Crepe é seca, áspera e escamosa. </p>
+                        <p>Em segundo lugar, seu corpo produz menos fibras de proteína de colágeno e elastina. </p>
+                        <p>Com menos elastina, sua pele perde a capacidade de esticar e começa a rachar.</p>
+                        <p>Com menos fibras de colágeno, sua pele perde sua “estrutura” e não fica mais tão firme. </p>
+                        <p>É por isso que começam a aparecer rugas. </p>
+                        <p>Enquanto seu corpo produz cada vez menos células novas…</p>
+                        <p>A sua pele normal vira uma Pele Crepe - fina e seca.</p>
+                        <p>E a falta de colágeno e elastina fazem a sua Pele Crepe ficar flácida e enrugada. </p>
+                        <p>O Active Anti-Ox usa uma poderosa combinação de Licopeno e Vitamina C para reter a umidade e aumentar a hidratação, nutrindo as células da epiderme. </p>
+                        <p>Enquanto isso, o Colágeno Hidrolisado, a Vitamina E e o Selênio auxiliam na produção de colágeno para aumentar a saúde da rede de proteínas da sua pele. </p>
 
-                    <h1 class="titulo">Como eu uso o Active Anti-Ox? </h1>
+                        <h1 class="titulo">Como eu uso o Active Anti-Ox? </h1>
 
-                    <p>Desenhamos esta fórmula para ser fácil de usar em casa.</p>
-                    <p>E se você usá-la conforme as instruções, você vai ver mudanças positivas na sua pele em poucas semanas. </p>
+                        <p>Desenhamos esta fórmula para ser fácil de usar em casa.</p>
+                        <p>E se você usá-la conforme as instruções, você vai ver mudanças positivas na sua pele em poucas semanas. </p>
 
-                    <h1 class="titulo">Esse suplemento tem registro na ANVISA?</h1>
+                        <h1 class="titulo">Esse suplemento tem registro na ANVISA?</h1>
 
-                    <p>Sim. Seguimos todas as práticas regulamentadas na ANVISA, o Produto está registrado no M.S. 6.2907.0010.</p>
+                        <p>Sim. Seguimos todas as práticas regulamentadas na ANVISA, o Produto está registrado no M.S. 6.2907.0010.</p>
 
-                    <h1 class="titulo">Eu tenho pele sensível, o Active Anti-Ox pode causar irritação? </h1>
+                        <h1 class="titulo">Eu tenho pele sensível, o Active Anti-Ox pode causar irritação? </h1>
 
-                    <p>Nossa fórmula foi projetada para peles finas e sensíveis.</p>
-                    <p>E por isso tomamos o cuidado de usar apenas ingredientes suaves e nutritivos para todos os tipos de pele. </p>
+                        <p>Nossa fórmula foi projetada para peles finas e sensíveis.</p>
+                        <p>E por isso tomamos o cuidado de usar apenas ingredientes suaves e nutritivos para todos os tipos de pele. </p>
 
-                    <h1 class="titulo">O que acontece se não funcionar para mim? </h1>
+                        <h1 class="titulo">O que acontece se não funcionar para mim? </h1>
 
-                    <p>Tenho certeza de que você ficará absolutamente surpresa com o rejuvenescimento que vai ter com o Active Anti-Ox. </p>
-                    <p>Só que, se por algum motivo, você ficar insatisfeita… você está 100% coberta pela nossa garantia especial. </p>
-                    <p>Se você está pronta para começar a parecer mais jovem e se livrar da Pele Crepe…</p>
-                    <p>Vá em frente e clique no botão de próxima etapa abaixo e nós te ajudaremos a começar. </p>
-                    <p>Muito obrigada novamente por estar aqui comigo hoje. </p>
-                    <p>Estou ansiosa para ajudá-la em sua jornada para parecer mais jovem e se sentir incrível.</p>
+                        <p>Tenho certeza de que você ficará absolutamente surpresa com o rejuvenescimento que vai ter com o Active Anti-Ox. </p>
+                        <p>Só que, se por algum motivo, você ficar insatisfeita… você está 100% coberta pela nossa garantia especial. </p>
+                        <p>Se você está pronta para começar a parecer mais jovem e se livrar da Pele Crepe…</p>
+                        <p>Vá em frente e clique no botão de próxima etapa abaixo e nós te ajudaremos a começar. </p>
+                        <p>Muito obrigada novamente por estar aqui comigo hoje. </p>
+                        <p>Estou ansiosa para ajudá-la em sua jornada para parecer mais jovem e se sentir incrível.</p>
+
 
 
                 </div>
             </div>
         </div>
     </section>
+    <footer>
+        <div class="ck-footer">
+            <div class="box-ck-footer">
+                <a href="#" class="cta-bottom link-checkout" rel="noreferrer noopener">
+                    Quero experimentar!
+                </a>
+            </div>
+        </div>
+    </footer>
 
+
+
+
+
+    <script>
+        $(window).scroll(function() {
+            $(this).scrollTop() >= $(document).height() / 100 * 50 ? $(".ck-footer").addClass("fixed-ck-footer") : $(".ck-footer").removeClass("fixed-ck-footer");
+        });
+    </script>
 
 </body>
 
