@@ -132,7 +132,6 @@
         .background-white {
             background-image: url(image/background_v2.jpg);
             background-size: cover;
-            background-position: right;
             padding: 48px 0 24px;
             position: relative;
         }
@@ -303,6 +302,190 @@
             transition: .3s;
             transform: translate3d(0, 0, 0);
         }
+        
+        @media (min-width: 992px) and (max-width: 1200px) {
+            .background-white {
+                background-position-x: -150px !important;
+            }
+            .cabecalho {
+                font-size: 48px;
+            }
+            h4 {
+                font-size: 24px;
+                width: 85%;
+                margin-bottom: 24px;
+            }
+            .line {
+                margin: 0 auto 12px 0;
+                width: 70%;
+            }
+            .comentario {
+                font-size: 22px;
+            }
+            .pagina {
+                padding: 50px 60px;
+            }
+            p {
+                font-size: 20px;
+                margin-bottom: 24px;
+            }
+            .titulo {
+                font-size: 36px;
+            }
+            .imagens {
+                width: 60%;
+            }
+            .imagens2 {
+                margin: 24px auto 48px;
+            }
+            .imagens3 {
+                margin: 0 auto 32px -50px;
+            }
+            .imagens4 {
+                width: 55%;
+            }
+            .box-destaque {
+                margin-bottom: 40px;
+                margin-top: 40px;
+            }
+            .btn-ckt {
+                width: 80%;
+                margin: 0 auto 32px;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991px) {
+            .cabecalho {
+                font-size: 32px;
+            }
+            h4 {
+                font-size: 24px;
+                width: 85%;
+                margin-bottom: 24px;
+            }
+            .comentario {
+                width: 95%;
+                font-size: 20px;
+            }
+            .pagina {
+                padding: 40px 60px;
+            }
+            p {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .titulo {
+                font-size: 32px;
+                margin: 40px auto;
+            }
+            .imagens2 {
+                margin: 0px auto 40px;
+                width: 70%;
+            }
+            .imagens3 {
+                margin: 0 auto 32px -50px;
+                width: auto;
+            }
+            .imagens4 {
+                width: 60%;
+            }
+            .box-ckt {
+                width: 90%;
+                padding: 10px 20px;
+                border-radius: 12px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .background-white {
+                background-size: contain;
+                background-position-y: -70px;
+                background-repeat: no-repeat;
+                background-image: url(image/background-mobile.jpg);
+                background-color: white;
+            }
+            .cabecalho {
+                font-size: 40px;
+                margin: 40px auto 20px;
+            }
+            h4 {
+                font-size: 22px;
+                margin-bottom: 22px;
+            }
+            .comentario {
+                font-size: 18px;
+                width: 100%;
+            }
+            .container {
+                max-width: 600px;
+            }
+            .pagina {
+                padding: 50px 50px;
+            }
+            p {
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
+            .titulo {
+                margin: 40px auto;
+                font-size: 32px;
+            }
+            .imagens {
+                width: 70%;
+            }
+            .imagens2 {
+                margin: 10px auto 24px;
+            }
+            .imagens3 {
+                width: 50%;
+            }
+            .imagens4 {
+                width: 70%;
+            }
+            .br-mobile {
+                display: none;
+            }
+            .btn-ckt {
+                width: 100%;
+                border-radius: 12px;
+            }
+        }
+        
+        @media (max-width: 425px) {
+            .container {
+                max-width: 390px;
+            }
+            .background-white {
+                background-position-y: -40px;
+            }
+            h4 {
+                font-size: 18px;
+            }
+            .comentario {
+                font-size: 16px;
+            }
+            .pagina {
+                padding: 40px 40px;
+            }
+            .titulo {
+                font-size: 26px;
+            }
+            .imagens2 {
+                width: 70%;
+            }
+            .imagens3 {
+                width: 80%;
+            }
+            .box-destaque {
+                padding: 30px 30px 8px;
+            }
+            .imagens {
+                width: 90%;
+            }
+            .imagens4 {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -330,7 +513,7 @@
     <section class="background-blue" id="pagina">
         <div class="container ">
             <div class="row justify-content-center">
-                <div class="col-md-10 pagina">
+                <div class="col-md-12 col-lg-10 pagina">
                     <p>Por anos vi mulheres desabarem em lágrimas, enquanto narravam como a aparência envelhecida da pele estava afetando suas vidas…</p>
                     <p>…e destruindo sua autoestima. </p>
                     <p>Uma senhora de 62 anos abandonou a hidroginástica, porque não se sentia bem usando maiô.</p>
@@ -359,7 +542,7 @@
                     <p>Uma pele que lembra muito o papel crepom...</p>
                     <p>Você já deve ter visto por aí, propagandas de cremes que prometem hidratar esse tipo de pele...</p>
 
-                    <h1 class="titulo">Só que ninguém te conta que Hidratantes<br> NÃO FUNCIONAM na "Pele Crepe".</u>
+                    <h1 class="titulo">Só que ninguém te conta que Hidratantes<br class="br-mobile"> NÃO FUNCIONAM na "Pele Crepe".</u>
                     </h1>
 
                     <p>Se você usa hidratantes e não vê resultados...</p>
@@ -427,7 +610,7 @@
                     <p>Se você deseja corrigir esse problema na sua aparência, primeiro você precisa fechar as rachaduras da sua pele para que ela volte a ficar hidratada.</p>
                     <p>Eu costumo explicar assim... </p>
 
-                    <h1 class="titulo">Passar Hidratantes na Pele CREPE,<br> é como jogar água num vidro. </h1>
+                    <h1 class="titulo">Passar Hidratantes na Pele CREPE,<br class="br-mobile"> é como jogar água num vidro. </h1>
 
                     <img src="image/GIF CCHUVA.gif" alt="" class="imagens">
 
