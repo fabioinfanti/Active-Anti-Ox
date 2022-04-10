@@ -55,10 +55,6 @@
             cursor: pointer !important;
         }
         
-        a:hover {
-            color: white !important;
-        }
-        
         h4 {
             font-family: 'Roboto Slab', serif;
             font-size: 32px;
@@ -130,7 +126,7 @@
         }
         
         .background-white {
-            background-image: url(image/background_v2.jpg);
+            background-image: url(image/background_v3.jpg);
             background-size: cover;
             padding: 48px 0 24px;
             position: relative;
@@ -291,6 +287,10 @@
             text-decoration: none;
         }
         
+        .cta-bottom:hover {
+            color: white;
+        }
+        
         [data-anime] {
             opacity: 0;
             transition: .3s;
@@ -301,6 +301,19 @@
             opacity: 1;
             transition: .3s;
             transform: translate3d(0, 0, 0);
+        }
+        
+        .background-red {
+            background-color: red;
+            padding: 10px;
+        }
+        
+        .disclaimer {
+            color: white;
+            text-align: center;
+            margin: auto;
+            display: block;
+            font-size: 16px;
         }
         
         @media (min-width: 992px) and (max-width: 1200px) {
@@ -355,6 +368,10 @@
         }
         
         @media (min-width: 768px) and (max-width: 991px) {
+            .background-white {
+                background-position-x: -130px;
+                padding: inherit;
+            }
             .cabecalho {
                 font-size: 32px;
             }
@@ -403,6 +420,7 @@
                 background-repeat: no-repeat;
                 background-image: url(image/background-mobile.jpg);
                 background-color: white;
+                padding: 32px 0 24px;
             }
             .cabecalho {
                 font-size: 40px;
@@ -449,6 +467,9 @@
                 width: 100%;
                 border-radius: 12px;
             }
+            .disclaimer {
+                font-size: 12px;
+            }
         }
         
         @media (max-width: 425px) {
@@ -457,6 +478,10 @@
             }
             .background-white {
                 background-position-y: -40px;
+            }
+            .cabecalho {
+                font-size: 34px;
+                text-shadow: 0 0 16px white;
             }
             h4 {
                 font-size: 18px;
@@ -490,12 +515,21 @@
 </head>
 
 <body>
+    <section class="background-red">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="disclaimer">Esta apresentação tem fins informativos e não pode ser considerada como aconselhamento médico. Resultados podem variar de pessoa para pessoa. </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="background-white">
         <div class="container">
             <div class="row justify-content-start">
                 <div class="col-md-8">
-                    <h1 class="cabecalho">É POSSÍVEL REVERTER AQUELA PELE FINA E FLÁCIDA QUE PARECE AMASSADA?</h1>
-                    <h4>Doutor afirma: "Sim… E o melhor, SEM sofrer com agulhas e SEM ter que pagar caros por cremes hidratantes..."</h4>
+                    <h1 class="cabecalho"><span style="background-color: white;">É POSSÍVEL REVERTER AQUELA PELE FINA E FLÁCIDA QUE PARECE AMASSADA?</span></h1>
+                    <h4><u>Doutor afirma:</u> "Sim… E o melhor, SEM sofrer com agulhas e SEM ter que pagar caros por cremes hidratantes..."</h4>
                     <div class="line"></div>
                     <p class="comentario">"Uma mulher disse se sentir 15 anos mais jovem depois de usar este hidratante caseiro natural."</p>
                 </div>
