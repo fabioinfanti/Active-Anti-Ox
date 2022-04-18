@@ -45,7 +45,7 @@
 
         body {
             background-color: lightgray;
-            font-family: 'Roboto', serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         .container-fluid {
@@ -64,6 +64,7 @@
 
         b {
             font-weight: 700 !important;
+            
         }
 
         h4 {
@@ -73,6 +74,7 @@
             font-weight: 300;
             margin-bottom: 32px;
             width: 85%;
+            text-shadow: 0 0 20px white;
         }
 
         p {
@@ -80,7 +82,7 @@
             font-size: 20px;
             line-height: 1.4;
             margin-bottom: 40px;
-            color: black;
+            color: #3b4157;;
             font-weight: 300;
         }
 
@@ -121,7 +123,7 @@
             font-size: 64px;
             line-height: 1.1;
             width: 95%;
-            text-shadow: 0 0 10px #fff;
+            text-shadow: 0 0 20px #fff;
         }
 
         .subhead {
@@ -177,6 +179,13 @@
         }
 
         .imagens2 {
+            display: block;
+            margin: 40px auto 72px;
+            box-shadow: 0 0 20px #00000025;
+            width: 100%;
+        }
+
+        .imagens5 {
             display: block;
             margin: 40px auto 72px;
             box-shadow: 0 0 20px #00000025;
@@ -510,7 +519,8 @@
                 background-size: cover;
                 background-color: white;
                 padding: 32px 0 24px;
-                background-position-x: -80px;
+                background-position-y: -120px;
+                background-image: url(image/background-mobile.jpg);
             }
 
             .cabecalho {
@@ -546,6 +556,10 @@
                 font-size: 32px;
             }
 
+            .seta {
+                display: none;
+            }
+
             .imagens {
                 width: 90%;
             }
@@ -579,10 +593,19 @@
         }
 
         @media (max-width: 425px) {
-            
+            .ck-footer .box-ck-footer{
+                max-width: 425px;
+                padding: 0;
+                
+            } 
+
+            .cta-bottom {
+                border-radius: 0;
+                padding: 14px 5px;
+            }
 
             .background-white {
-                background-position-x: -300px;
+                background-position-y: -40px;
             }
 
             .cabecalho {
@@ -634,6 +657,7 @@
         @media (max-width: 375px) {
             .background-white {
                 padding: 20px;
+                background-position-y: 0px;
             }
 
             .cabecalho {
@@ -1287,7 +1311,7 @@
         </div>
     </section>
     <footer>
-        <div class="ck-footer">
+        <div class="ck-footer" id="sticky-bar">
             <div class="box-ck-footer">
                 <a href="#" class="cta-bottom link-checkout" rel="noreferrer noopener">
                     Quero experimentar!
@@ -1321,6 +1345,7 @@
             $(this).scrollTop() >= $(document).height() / 100 * 50 ? $(".ck-footer").addClass("fixed-ck-footer") : $(".ck-footer").removeClass("fixed-ck-footer");
         });
     </script>
+
 
 </body>
 
